@@ -11,3 +11,7 @@ library/libl1.so: library
 clean:
 	make -C library clean
 	rm -f *.o main *.*~
+
+test: main
+	-./main
+	LD_LIBRARY_PATH=./library ./main
