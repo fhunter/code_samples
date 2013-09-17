@@ -1,7 +1,9 @@
+#Подключить библиотеку для работы с dlopen
 LDFLAGS=-ldl
 
 all: main plugins
 
+#Это заставляет собрать плагины и копирует их в эту папку
 plugins: plugin1/plugin.so plugin2/plugin.so
 	cp plugin1/plugin.so ./plugin1.so
 	cp plugin2/plugin.so ./plugin2.so
